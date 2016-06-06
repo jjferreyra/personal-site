@@ -1,10 +1,10 @@
 /*Make navbar links scroll to correct place*/
-.scroll-buffer {
+.scroll-buffer { /*For the main navbar buttons*/
   padding-top:30px;
   margin-top:-30px;
 }
 
-.scroll-buffer-l {
+.scroll-buffer-l { /*For the navbar buttons in the dropdown*/
     padding-top: 50px;
     margin-top: -50px;
 }
