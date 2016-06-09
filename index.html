@@ -8,12 +8,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" href="css/style.css" title="main" charset="utf-8">
-	<link rel="stylesheet" href="css/intro.css" title="main" charset="utf-8">
+	<!-- <link rel="stylesheet" href="css/intro.css" title="main" charset="utf-8"> -->
 </head>
 
 <body data-spy="scroll" data-target="#my-navbar">
 
-	<div class="intro"></div>
+	<div id="intro"></div>
+	<div id="main">
   <!-- Navbar -->
   	<nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
   		<div class="container">
@@ -47,10 +48,8 @@
 
   	<div class="jumbotron" id="top">
   		<div class="container text-center" id="top-text">
-			<h1>Max Goodridge<br><small>Full Stack Software Developer</small></h1>
-			<p>
-			   "I like code."<small class="tiny-quote"><small> - Feel free to quote that.</small></small>
-			</p>
+			<h1>Max Goodridge</h1>
+			<h2>Full Stack Software Developer</h2>
   			<p>Welcome to my digital portfolio. This is where I showcase all the cool stuff
 				 that I have enjoyed working on recently and I share a little bit about my
 				 personal life too.</p>
@@ -449,13 +448,16 @@
 
 		</center>
     </footer>
+
+	</div>
 	<!-- HTML done, now load the JavaScript vendor code -->
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js" integrity="sha256-H28SdxWrZ387Ldn0qogCzFiUDDxfPiNIyJX7BECQkDE=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/3ced957014.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
 
 	<!-- Load custom JavaScript -->
 	<script src="js/main.js"></script>
-	<script src="js/intro.js"></script>
   </body>
 </html>
