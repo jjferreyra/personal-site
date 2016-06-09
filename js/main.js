@@ -26,7 +26,7 @@ $(document).ready(function() {
             // Long pause after each sentence
             if (isSentenceEnd) {
               duration += 0.8
-                time += 0.6
+                time += 0.8
             }
 
             TweenLite.set(element, {autoAlpha:0, scale:0, z:0.01})
@@ -36,17 +36,23 @@ $(document).ready(function() {
         }
     }
 
-    machineGun("Welome. This is my personal digital portfolio. Enjoy.");
+    machineGun("Hi. Welcome. This is my personal digital portfolio. I just love to build cool stuff. Enjoy.");
+
+    var timerBuffer = 16500
 
     setTimeout(function() {
-        $('#intro').fadeOut(500)
-    }, 10000)
+        $('#intro').fadeOut(1000)
+    }, timerBuffer)
 
     setTimeout(function() {
         $('#main').fadeIn(3000)
         $('#top').hide().slideDown(3000).fadeIn(3000)
-        $('body').css("background-color", "white").animate({"color": "black"}, 1000)
-    }, 11000)
+        $('body').animate({
+            'backgroundColor':'#fff',
+            'color':'#000'
+        }, 500)
+
+    }, timerBuffer + 1000)
 
 
 });
