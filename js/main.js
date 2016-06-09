@@ -36,9 +36,9 @@ $(document).ready(function() {
         }
     }
 
-    machineGun("Hi. Welcome. This is my personal digital portfolio. I just love to build cool stuff. Enjoy.");
+    machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.");
 
-    var timerBuffer = 16500
+    var timerBuffer = 13000
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
