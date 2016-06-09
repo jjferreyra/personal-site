@@ -1,0 +1,40 @@
+var container = $("#demo")
+// RegEx identifies end of sentence
+var _sentenceEndExp = /(\.|\?|!)$/g;
+
+function machineGun(text) {
+
+    var words = text.split(" "),
+        tl = new TimelineMax({delay:1, repeat:0, repeatDelay:4}),
+        wordCount = words.length,
+        time = 0,
+        word, element, duration, isSentenceEnd, i;
+
+    for(i = 0; i < wordCount; i++){
+        word = words[i];
+        isSentenceEnd = _sentenceEndExp.test(word);
+        element = $("<h3>" + word + "</h3>").appendTo(container);
+        duration = Math.max(0.5, word.length * 0.12); //longer words take longer to read, so adjust timing. Minimum of 0.5 seconds.
+
+        // Long pause after each sentence
+        if (isSentenceEnd) {
+          duration += 0.8;
+        }
+
+        TweenLite.set(element, {autoAlpha:0, scale:0, z:0.01})
+        tl.to(element, duration, {scale:1.2,  ease:SlowMo.ease.config(0.25, 0.9)}, time)
+        .to(element, duration, {autoAlpha:1, ease:SlowMo.ease.config(0.25, 0.9, true)}, time)
+        time += duration - 0.05;
+        if (isSentenceEnd) {
+          time += 0.6; //at the end of a sentence, add a pause for dramatic effect.
+        }
+        if (word == "Enjoy.") {
+            // tl.kill()
+        }
+    }
+}
+
+
+machineGun("Welome. This is my personal digital portfolio. Enjoy.");
+
+$('#demo').fadeOut(10000)
