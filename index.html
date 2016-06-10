@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" href="css/style.css" title="main" charset="utf-8">
-	<!-- <link rel="stylesheet" href="css/intro.css" title="main" charset="utf-8"> -->
+	<link rel="stylesheet" href="css/lightbox.css" title="main" charset="utf-8">
 </head>
 
 <body data-spy="scroll" data-target="#my-navbar">
@@ -71,9 +71,12 @@
   	<div class="container scroll-buffer" id="funfacts">
   		<section>
 			<div class="page-header">
-				<a href="images/pp.jpg">
-				<img src="images/pp.jpg" alt="Profile Picture" class="img-circle pull-right col-xs-2 col-md-1"/>
-				</a>
+
+				<div class="my-image">
+					<a href="images/pp.jpg" data-lightbox="pp-modal" data-title="">
+						<img src="images/pp.jpg" alt="Profile Picture" class="img-circle pull-right col-xs-2 col-md-1" id="pp"/>
+					</a>
+				</div>
   				<h2>Fun Facts<br><small>Here's some fun facts about me. At least, I think they're fun. I guess you'll just have to read them to find out!</small></h2>
   			</div>
 
@@ -107,10 +110,7 @@
   					</p>
 					<img src="images/laptop.jpg" class="img-responsive" alt="Laptop"/>
 					<p class="center">
-						That was when I first started to fall in love with computer science - I would spend hours on Gimp (a
-						free version of Photoshop) editing my photos. I would create accounts on any and almost all websites I came across so
-						that I could experience the true power of the Web 2.0 (a.k.a. "the interactive web") and I've been loving
-						it ever since. Yes, I'm a geek. I know.
+						That was when I first started to fall in love with computer science - I would spend hours editing my photos on Gimp (a free alternative to Photoshop). I would create accounts on any and almost all websites I came across so that I could experience the true power of the Web 2.0 (a.k.a. "the interactive web") and I've been loving it ever since. Yes, I'm a geek. I know.
 					</p>
   				</div>
   				<div class="col-md-4">
@@ -460,6 +460,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
 
 	<!-- Load custom JavaScript -->
+	<script src="js/lightbox.min.js"></script>
 	<script src="js/main.js"></script>
   </body>
 </html>

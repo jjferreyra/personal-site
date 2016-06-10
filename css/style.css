@@ -157,3 +157,18 @@ p.large {
   font-size: 25vw;
   top: 65px;
 }
+
+.my-image img {
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.my-image img:hover {
+    padding: inherit;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: black;
+}

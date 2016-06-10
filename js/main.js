@@ -1,23 +1,26 @@
-
 $(document).ready(function() {
     $('#main').hide()
 
     // Intro animation
 
     var container = $("#intro")
-    // RegEx identifies end of sentence
+        // RegEx identifies end of sentence
     var _sentenceEndExp = /(\.|\?|!)$/g;
 
     function machineGun(text) {
 
         var words = text.split(" "),
-            tl = new TimelineMax({delay:1, repeat:0, repeatDelay:4}),
+            tl = new TimelineMax({
+                delay: 1,
+                repeat: 0,
+                repeatDelay: 4
+            }),
             wordCount = words.length,
             time = 0,
             word, element, duration, isSentenceEnd, i;
 
         // For each word in the given string...
-        for(i = 0; i < wordCount; i++){
+        for (i = 0; i < wordCount; i++) {
             word = words[i];
             isSentenceEnd = _sentenceEndExp.test(word);
 
@@ -40,16 +43,25 @@ $(document).ready(function() {
                 time += 0.8
             }
 
-            TweenLite.set(element, {autoAlpha:0, scale:0, z:0.01})
-            tl.to(element, duration, {scale:1.2,  ease:SlowMo.ease.config(0.25, 0.9)}, time)
-            .to(element, duration, {autoAlpha:1, ease:SlowMo.ease.config(0.25, 0.9, true)}, time)
+            TweenLite.set(element, {
+                autoAlpha: 0,
+                scale: 0,
+                z: 0.01
+            })
+            tl.to(element, duration, {
+                    scale: 1.2,
+                    ease: SlowMo.ease.config(0.25, 0.9)
+                }, time)
+                .to(element, duration, {
+                    autoAlpha: 1,
+                    ease: SlowMo.ease.config(0.25, 0.9, true)
+                }, time)
             time += duration - 0.05
         }
     }
 
-    machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.")
-
-    var timerBuffer = 15000
+    // machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.")
+    var timerBuffer = 0 //15000
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
@@ -59,11 +71,12 @@ $(document).ready(function() {
         $('#main').fadeIn(3000)
         $('#top').hide().slideDown(3000).fadeIn(3000)
         $('body').animate({
-            'backgroundColor':'#fff',
-            'color':'#000'
+            'backgroundColor': '#fff',
+            'color': '#000'
         }, 500)
-
     }, timerBuffer + 1000)
 
-
+    $('.my-image').hover(function() {
+        $('.my-image').css({'margin-top': '100px'})
+    })
 })
