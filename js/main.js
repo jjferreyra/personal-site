@@ -60,8 +60,9 @@ $(document).ready(function() {
         }
     }
 
+    // Uncomment these lines to turn cool intro back on
     // machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.")
-    var timerBuffer = 0//15000
+    var timerBuffer = 0 //15000
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
