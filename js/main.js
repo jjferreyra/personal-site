@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#main').hide()
 
     // Intro animation
-    
+
     var container = $("#intro")
     // RegEx identifies end of sentence
     var _sentenceEndExp = /(\.|\?|!)$/g;
@@ -59,7 +59,7 @@ $(document).ready(function() {
         $('#main').fadeIn(3000)
         $('#top').hide().slideDown(3000).fadeIn(3000)
         $('body').animate({
-            'backgroundColor':'#fff'
+            'backgroundColor':'#fff',
             'color':'#000'
         }, 500)
 
