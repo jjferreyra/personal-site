@@ -23,9 +23,16 @@ $(document).ready(function() {
             // Longer words stay on screen longer
             duration = Math.max(0.5, word.length * 0.12);
 
+            // Last word stays on the screen for longer
+            if (i == wordCount - 1) {
+                console.log("last word")
+                duration += 2
+                time += 0.8
+            }
+
             // Long pause after each sentence
             if (isSentenceEnd) {
-              duration += 0.8
+                duration += 0.8
                 time += 0.8
             }
 
@@ -38,7 +45,7 @@ $(document).ready(function() {
 
     machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.");
 
-    var timerBuffer = 13000
+    var timerBuffer = 15000
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
