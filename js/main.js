@@ -77,7 +77,15 @@ $(document).ready(function() {
         }, 500)
     }, timerBuffer + 1000)
 
-    $('.my-image').hover(function() {
-        $('.my-image').css({'margin-top': '100px'})
-    })
+    // $('.my-image').hover(function() {
+    //     $('.my-image').animate({'width': '10px',
+    //                             'height': '10px',
+    //                             'padding': 'inherit'
+    //     }, 'slow')
+    // }, function() {
+    //     $('.my-image').animate({'width': '-10%',
+    //                             'height': '-10%',
+    //                             'position': 'relative'
+    //     }, 'slow')
+    // })
 })

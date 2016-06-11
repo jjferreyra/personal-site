@@ -160,15 +160,12 @@ p.large {
 
 .my-image img {
     position: relative;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    background-color: white;
+    margin-top: -12px;
+    margin-bottom: 12px;
 }
 
 .my-image img:hover {
     padding: inherit;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    position: relative;
-    background-color: black;
+    margin-top: -24px;
+    margin-bottom: 24px;
 }
