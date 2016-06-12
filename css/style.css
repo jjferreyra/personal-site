@@ -14,6 +14,15 @@ body {
     padding-top: 50px;
     background-color: black;
     color: white;
+    /*font-family: 'Asap', sans-serif;*/
+}
+
+#my-name {
+    font-size: 100px;
+}
+
+.asap-font {
+    font-family: 'Asap', sans-serif;
 }
 
 /*Make any paragraph text look better by fixing alignment*/
