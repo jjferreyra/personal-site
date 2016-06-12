@@ -30,6 +30,7 @@ $(document).ready(function() {
             // Longer words stay on screen longer
             duration = Math.max(0.5, word.length * 0.12)
 
+
             // Last word stays on the screen for longer
             if (i == wordCount - 1) {
                 console.log("last word")
@@ -60,7 +61,6 @@ $(document).ready(function() {
         }
     }
 
-    // Uncomment these lines to turn cool intro back on
     // machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.")
     var timerBuffer = 0 //15000
 
