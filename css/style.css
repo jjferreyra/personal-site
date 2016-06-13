@@ -21,6 +21,10 @@ body {
     font-size: 10vw;
 }
 
+#my-roll {
+    font-size: 30px;
+}
+
 .asap-font {
     font-family: 'Asap', sans-serif;
 }
