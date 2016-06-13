@@ -61,8 +61,8 @@ $(document).ready(function() {
         }
     }
 
-    // machineGun("Hi. Welcome. I'm Max and I love to build cool stuff. Enjoy.")
-    var timerBuffer = 0 //15000
+    machineGun("Hi. Welcome. I'm Max and I love to build cool stuff to solve interesting problems. Enjoy.")
+    var timerBuffer = 16000
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
