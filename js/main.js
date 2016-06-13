@@ -33,7 +33,6 @@ $(document).ready(function() {
 
             // Last word stays on the screen for longer
             if (i == wordCount - 1) {
-                console.log("last word")
                 duration += 2
                 time += 0.8
             }
@@ -61,8 +60,8 @@ $(document).ready(function() {
         }
     }
 
-    machineGun("Hi. Welcome. I'm Max and I love to build cool stuff to solve interesting problems. Enjoy.")
-    var timerBuffer = 16000
+    // machineGun("Hi. Welcome. I'm Max and I love to build cool stuff to solve interesting problems. Enjoy.")
+    var timerBuffer = 0 //17500
 
     setTimeout(function() {
         $('#intro').fadeOut(1000)
